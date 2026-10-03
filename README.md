@@ -123,15 +123,16 @@ or `--fps` to the render command (or `--scale=2` for a quick 4K of a 1080p comp)
    />
    ```
 
-   Need a transparent export by default (also for the Studio's Render
-   button)? Add `calculateMetadata={transparentDefaults}` like `OverlayBadge`.
+   For a transparent export, use the ProRes 4444 command below.
 
 3. Refresh the Studio – it appears in the sidebar.
 
 ## Render / export
 
 Replace `<id>` with a composition id (`TitleCard`, `LowerThird`, `KineticText`,
-`OverlayBadge`). You can also render from the Studio's **Render** button.
+`OverlayBadge`). You can also render from the Studio's **Render** button. For transparency, pick
+codec **ProRes**, profile **4444**, pixel format **yuva444p10le** and image
+format **PNG** in its dialog.
 
 **MP4 (H.264, high quality – no transparency):**
 

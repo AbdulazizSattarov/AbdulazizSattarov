@@ -32,15 +32,6 @@ import {
  *   defaultProps     -> starting values for the schema
  */
 
-// Renders with a real alpha channel by default (also used by the Studio's
-// Render button). CLI flags still override these.
-const transparentDefaults = () => ({
-  defaultCodec: "prores" as const,
-  defaultProResProfile: "4444" as const,
-  defaultPixelFormat: "yuva444p10le" as const,
-  defaultVideoImageFormat: "png" as const,
-});
-
 export const RemotionRoot: React.FC = () => {
   return (
     <>
@@ -79,7 +70,6 @@ export const RemotionRoot: React.FC = () => {
           durationInFrames={sec(3)}
           schema={overlayBadgeSchema}
           defaultProps={overlayBadgeDefaults}
-          calculateMetadata={transparentDefaults}
         />
       </Folder>
     </>
